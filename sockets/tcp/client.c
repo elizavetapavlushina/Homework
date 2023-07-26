@@ -42,7 +42,8 @@ int main() {
 	strcpy(server.sun_path, ADDRESS);
 
 	int addrlen = 0;
-	addrlen = sizeof(server.sun_family) + strlen(server.sun_path);
+	//addrlen = sizeof(server.sun_family) + strlen(server.sun_path);
+	addrlen = sizeof(server);
 
 	if(connect(sock_fd, (struct sockaddr *)&server, addrlen) == -1) {
 
