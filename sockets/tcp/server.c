@@ -25,7 +25,7 @@ int main() {
 	unlink (ADDRESS);
 
 	int addrlen = 0;
-	addrlen = sizeof(server.sun_family) + strlen(server.sun_path);
+	addrlen = sizeof(server);
 	
 	if(bind(sock_fd, (struct sockaddr *)&server, addrlen) == -1) {
 
@@ -42,7 +42,7 @@ int main() {
 
 	int new_s_fd;
 	int client_ad_len = 0;
-	client_ad_len = sizeof(client.sun_family) + strlen(client.sun_path);
+	client_ad_len = sizeof(client);
 
 	if((new_s_fd = accept(sock_fd, (struct sockaddr *)&client, &client_ad_len)) == -1) {
 
