@@ -57,10 +57,11 @@ int main() {
 		}
 
 		printf("%s\n\n", buff);
+		close(sock_fd);
 
 	}
 	
 
-	close(sock_fd);
+	
 	exit(EXIT_SUCCESS);
 }
