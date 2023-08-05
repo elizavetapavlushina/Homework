@@ -14,7 +14,7 @@ int main() {
 	struct sockaddr_in server =
 	{
 		server.sin_family = AF_INET,
-		server.sin_port = htons(7000),
+		server.sin_port = htons(7100),
 		server.sin_addr.s_addr = inet_addr("127.0.0.1"),
 
 	};
@@ -40,6 +40,7 @@ int main() {
 	
 	char message[SIZE_BUFF];
 	const char mod[] = "23";
+	//const char test[] = "111";
 	while(1){
 
 		if(recvfrom(sock_fd, &message, SIZE_BUFF, 0, 
