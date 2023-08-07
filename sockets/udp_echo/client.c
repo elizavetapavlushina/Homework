@@ -40,10 +40,10 @@ int main() {
 
 			perror("client: send message error");
 			exit(EXIT_FAILURE);
-	} else {
+		} else {
 
 		printf("The message sended\n");
-	}
+		}
 
 		if(recvfrom(sock_fd, &buffer, SIZE_BUFF, 0,
 				(struct sockaddr *)&server, &addrlen) == -1) {
